@@ -1,0 +1,84 @@
+@keyframes move_dots {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(180deg);
+  }
+}
+@keyframes move_bars {
+  0% {
+    transform: scaleY(1);
+  }
+  20% {
+    transform: scaleY(2);
+  }
+  40% {
+    transform: scaleY(1);
+  }
+  60% {
+    transform: scaleY(1);
+  }
+  80% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #6abcbe;
+}
+
+.flex {
+  height: 300px;
+  margin-top: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex .dots {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+  animation: move_dots 1.2s ease infinite;
+}
+.flex .dots .dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+.flex .bars {
+  width: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+.flex .bars .bar {
+  width: 10px;
+  height: 50px;
+  background-color: #ffffff;
+  animation: move_bars 1.2s ease infinite;
+}
+.flex .bars .bar:first-child {
+  animation-delay: 0.1s;
+}
+.flex .bars .bar:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.flex .bars .bar:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.flex .bars .bar:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.flex .bars .bar:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/*# sourceMappingURL=style.css.map */
